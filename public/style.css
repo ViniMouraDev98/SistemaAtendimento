@@ -329,8 +329,8 @@ select.status-naopago {
   box-shadow: var(--shadow-base);
 }
 
-.badge.pago { background-color: var(--success-green); color: var(--text-light); }
-.badge.naopago { background-color: var(--danger-red); color: var(--text-light); }
+.badge.pago { background-color: #2e7d32; color: var(--text-light); }
+.badge.naopago { background-color: #B22234; color: var(--text-light); }
 
 .empty-state {
   text-align: center;
