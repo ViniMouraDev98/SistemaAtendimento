@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
 
 :root {
-  --bg-main: #3D3D3D;
-  --primary-blue: #3C3B6E;
+  --bg-main: #EEEEEE;
+  --primary-blue: #000000;
   --bg-card: #FFFFFF;
-  --danger-red: #B22234;
-  --success-green: #2e7d32;
-  --text-dark: #3D3D3D;
+  --danger-red: #333333;
+  --success-green: #666666;
+  --text-dark: #000000;
   --text-light: #FFFFFF;
-  --shadow-base: 4px 4px 10px rgba(0,0,0,0.3), -2px -2px 6px rgba(255,255,255,0.1);
-  --shadow-hover: 6px 6px 15px rgba(0,0,0,0.4), -3px -3px 8px rgba(255,255,255,0.15);
-  --shadow-inset: inset 2px 2px 5px rgba(0,0,0,0.2), inset -2px -2px 5px rgba(255,255,255,0.1);
+  --shadow-base: 4px 4px 10px rgba(0,0,0,0.15), -2px -2px 6px rgba(255,255,255,0.8);
+  --shadow-hover: 6px 6px 15px rgba(0,0,0,0.2), -3px -3px 8px rgba(255,255,255,0.9);
+  --shadow-inset: inset 2px 2px 5px rgba(0,0,0,0.1), inset -2px -2px 5px rgba(255,255,255,0.8);
   --border-radius: 16px;
   --transition: all 0.25s ease;
 }
@@ -234,7 +234,7 @@ select.status-naopago {
 .icon-pago { color: var(--success-green); }
 .icon-naopago { color: var(--danger-red); }
 .icon-neutro { color: var(--primary-blue); }
-.icon-pendente { color: #f57f17; } /* amber */
+.icon-pendente { color: #888888; } /* gray */
 
 /* Chart Container */
 .chart-container {
