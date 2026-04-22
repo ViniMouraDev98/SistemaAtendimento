@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle - Gerenciador de Atendimentos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <h2>Sistema</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Cadastrar Atendimento</a></li>
+      <li><a href="atendentes.html">Gerenciar Atendentes</a></li>
+      <li><a href="controle.html" class="active">Controle & Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <header class="page-header">
+      <h1>Dashboard & Controle</h1>
+    </header>
+
+    <!-- Seção A: Dashboard -->
+    <section class="dashboard-grid">
+      <div class="card interactive metric-card">
+        <div class="icon icon-neutro">📋</div>
+        <h3>Total de Atendimentos</h3>
+        <div class="value" id="metric-total">0</div>
+      </div>
+      <div class="card interactive metric-card">
+        <div class="icon icon-pago">✅</div>
+        <h3>Atendimentos Pagos</h3>
+        <div class="value" id="metric-pagos">0</div>
+      </div>
+      <div class="card interactive metric-card">
+        <div class="icon icon-naopago">⚠️</div>
+        <h3>Atendimentos Não Pagos</h3>
+        <div class="value" id="metric-naopagos">0</div>
+      </div>
+      <div class="card interactive metric-card">
+        <div class="icon icon-pago">💲</div>
+        <h3>Valor Total Recebido</h3>
+        <div class="value" id="metric-recebido">R$ 0,00</div>
+      </div>
+      <div class="card interactive metric-card">
+        <div class="icon icon-pendente">⏱️</div>
+        <h3>Valor a Receber</h3>
+        <div class="value" id="metric-areceber">R$ 0,00</div>
+      </div>
+    </section>
+
+    <!-- Gráfico -->
+    <section class="chart-container interactive">
+      <h2>Atendimentos por Atendente</h2>
+      <canvas id="atendentesChart"></canvas>
+    </section>
+
+    <!-- Seção B: Filtros -->
+    <section class="filters-bar">
+      <input type="text" id="filter-cliente" placeholder="🔍 Buscar por cliente...">
+      <input type="text" id="filter-atendente" placeholder="🔍 Buscar por atendente...">
+      <input type="date" id="filter-data" title="Filtrar por data">
+      <div class="filter-pills">
+        <button class="pill active" data-status="Todos">Todos</button>
+        <button class="pill" data-status="Pago">Pagos</button>
+        <button class="pill" data-status="Não Pago">Não Pagos</button>
+        <button class="pill" id="btn-limpar-filtros" style="background-color: var(--danger-red); color: white; margin-left: 10px;">🧹 Limpar</button>
+      </div>
+    </section>
+
+    <!-- Seção C: Lista -->
+    <section class="list-container" id="atendimentos-list">
+      <!-- Cards rendered via JS -->
+    </section>
+
+  </main>
+
+  <div id="atendimentoModal" class="modal-overlay">
+    <div class="modal-content card">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h2 style="margin-bottom: 1.5rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">Ficha do Atendimento</h2>
+      <div id="modal-details" class="modal-body">
+        <!-- Renderizado dinamicamente -->
+      </div>
+      <div class="modal-actions" style="margin-top: 1.5rem; text-align: right;">
+        <button class="btn" id="btn-print" onclick="window.print()">🖨️ Imprimir</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Ação concluída!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

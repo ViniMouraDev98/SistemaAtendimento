@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atendentes - Gerenciador de Atendimentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <nav class="sidebar" id="sidebar">
+    <h2>Sistema</h2>
+    <ul class="nav-links">
+      <li><a href="index.html">Cadastrar Atendimento</a></li>
+      <li><a href="atendentes.html" class="active">Gerenciar Atendentes</a></li>
+      <li><a href="controle.html">Controle & Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <header class="page-header">
+      <h1>Gerenciar Atendentes</h1>
+    </header>
+
+    <div class="card form-container">
+      <h2>Novo Atendente</h2>
+      <form id="atendenteForm">
+        <div class="form-group">
+          <label for="nomeAtendente">Nome do Atendente *</label>
+          <input type="text" id="nomeAtendente" placeholder="Ex: João Silva" required>
+        </div>
+        <button type="submit" class="btn w-100">Salvar Atendente</button>
+      </form>
+    </div>
+
+    <section class="list-container" id="atendentes-list" style="margin-top: 2rem;">
+      <!-- Lista de atendentes renderizada via JS -->
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast">Ação concluída!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1776888176742",
+    "data": "2026-04-22",
+    "atendente": "Vinicius",
+    "cliente": "Silvia",
+    "status": "Não Pago",
+    "servico": "Consultoria",
+    "valor": 130,
+    "cidade": "Arujá",
+    "estado": "SP"
+  },
+  {
+    "id": "1776890420830",
+    "data": "2026-04-22",
+    "atendente": "Vinicius",
+    "cliente": "Maria",
+    "status": "Pago",
+    "servico": "Consultoria",
+    "valor": 130,
+    "cidade": "Arujá",
+    "estado": "SP"
+  }
+]
