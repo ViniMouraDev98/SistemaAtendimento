@@ -90,11 +90,11 @@ h1, h2, h3, h4, h5, h6 {
 .page-header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(255,255,255,0.1);
+  border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 
 .page-header h1 {
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 /* Container & Cards */
